@@ -15,7 +15,7 @@ dnf install fontconfig-enhanced-defaults fontconfig-font-replacements
 echo "Installing nano"
 dnf install nano 
 
-# Attempt installation 
+# Attempt installations 
 echo "Enabling flat-remix repository"
 dnf copr enable daniruiz/flat-remix 
 
@@ -26,13 +26,20 @@ dnf install flat-remix-gtk -y
 
 echo "Now installing some useful tools..."
 
-echo "Downloading qBittorrent" 
+echo "Installing qBittorrent" 
 dnf install qbittorrent -y
 
-echo "Downloading VLC"
+echo "Installing VLC"
 dnf install "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
 dnf install "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 dnf install vlc -y
+
+echo "Installing VirtualBox (6.0.8) - Check new releases here: https://www.virtualbox.org/wiki/Linux_Downloads" 
+wget "https://download.virtualbox.org/virtualbox/6.0.8/VirtualBox-6.0-6.0.8_130520_fedora29-1.x86_64.rpm"
+rpm -I VirtualBox-*.rpm
+
+echo "Installing BleachBit"
+dnf install bleachbit -y
 
 # Bye bye 
 echo "Installation has completed successfully, thanks for using us."
