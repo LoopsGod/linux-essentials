@@ -16,6 +16,9 @@ echo "Installing nano"
 dnf install nano 
 
 # Attempt installations 
+echo "Installing GNOME Tweaks first..."
+dnf install gnome-tweaks -y
+
 echo "Enabling flat-remix repository"
 dnf copr enable daniruiz/flat-remix 
 
