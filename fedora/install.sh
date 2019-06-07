@@ -39,7 +39,7 @@ dnf install vlc -y
 
 echo "Installing VirtualBox (6.0.8) - Check new releases here: https://www.virtualbox.org/wiki/Linux_Downloads" 
 wget "https://download.virtualbox.org/virtualbox/6.0.8/VirtualBox-6.0-6.0.8_130520_fedora29-1.x86_64.rpm"
-rpm -I VirtualBox-*.rpm
+rpm -i VirtualBox-*.rpm
 
 echo "Installing BleachBit"
 dnf install bleachbit -y
