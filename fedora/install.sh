@@ -3,7 +3,6 @@
 echo "Copyright (C) josh1dev, https://github.com/josh1dev"
 echo "Now going to start installing..."
 echo "Make sure you're root."
-sudo su 
 
 echo "Enabling RPM Fusion Repositories" 
 dnf install "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
